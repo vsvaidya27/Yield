@@ -1,4 +1,4 @@
-const POOL_TO_ID_MAP = {
+export const POOL_TO_ID_MAP = {
     "compound_base": "ae703e6a-c47e-44bb-bb5d-ba65be18aa7e",
     "compound_arbitrum": "8db29638-56de-488a-8b4a-991759ba1544",
     "aave-ethereum": "aa70268e-4b52-42bf-a116-608b370f9501",
@@ -6,7 +6,7 @@ const POOL_TO_ID_MAP = {
     "aave-arbitrum": "d9fa8e14-0447-4207-9ae8-7810199dfa1f"
 };
 
-async function getPoolInterestRates(pool_id) {
+export async function getPoolInterestRates(pool_id) {
 
     async function getPool(pool_id) {
         const response = await fetch(`https://yields.llama.fi/chart/${pool_id}`);

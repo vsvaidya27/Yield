@@ -1,5 +1,6 @@
 import express from 'express';
 import { getBestPool } from "./gpt.js"
+import { getPoolInterestRates, POOL_TO_ID_MAP } from "./pools.js"
 
 const app = express();
 
@@ -15,12 +16,25 @@ const POOL_TO_ADDRESS_MAP = {
 
 
 app.get('/',( req, res) => {
-    getBestPool().then(response => {
-        let response_obj = {}
-        response_obj[response] = POOL_TO_ADDRESS_MAP[response]
-        res.send(response_obj);
+    getBestPool().then(pool => {
+
+        async function getMostRecentYieldOfBestPool() {
+            let yields_of_best_pool = await getPoolInterestRates(POOL_TO_ID_MAP[pool]);
+            let most_recent_yield_of_best_pool = yields_of_best_pool[yields_of_best_pool.length - 1];
+            return most_recent_yield_of_best_pool;
+        }
+
+        let pool_address = POOL_TO_ADDRESS_MAP[pool];
+        let response_obj = {};
+
+        getMostRecentYieldOfBestPool().then(most_recent_yield_of_best_pool => {
+            response_obj[pool] = [most_recent_yield_of_best_pool, pool_address];
+            res.send(response_obj);
+        }).catch(error => {
+            console.log("error: ", error);
+        })
     }).catch(error => {
-      console.log("error: ", error);
+        console.log("error: ", error);
     })
 });
 
