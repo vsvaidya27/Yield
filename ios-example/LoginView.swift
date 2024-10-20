@@ -12,9 +12,16 @@ struct LoginView: View {
             Spacer()
             
             Text("Yield")
-                                .font(.title) // Adjust the font size as needed
-                                .fontWeight(.bold)
-                                .padding(.bottom, 20)
+                .font(.title) // Adjust the font size as needed
+                .fontWeight(.bold)
+                .padding(.bottom, 20)
+            
+            Image("Robinhood")
+                .resizable()
+                .scaledToFit()
+                .frame(height: 250)
+            
+            Spacer()
 
             TextField("Enter your email", text: $emailInput)
                 .textFieldStyle(RoundedBorderTextFieldStyle())

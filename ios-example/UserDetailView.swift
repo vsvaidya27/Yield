@@ -6,6 +6,7 @@ struct UserDetailView: View {
     @State private var showingAlert = false
     @StateObject var web3RPC: Web3RPC
     @StateObject var viewModel: ViewModel
+    @Binding var showLoginView: Bool
 
     var body: some View {
         if let user = viewModel.user {
@@ -81,7 +82,8 @@ struct UserDetailView: View {
                             do {
                               
                                 try await viewModel.logout()
-                               
+                                showLoginView = false
+                                
                             } catch {
                                 DispatchQueue.main.async {
                                     showingAlert = true
