@@ -7,6 +7,18 @@ A Yield aggregator iOS platform friendly to non-crypto-native users
 ## Architecture Overview
 ![yield_excalidraw](https://github.com/user-attachments/assets/928243a9-599b-4600-8998-a96d8c5f6d42)
 
+
+## Guide
+In this repository you can find different parts of the application:
+
+- `/bridge` Bridge, implementing CCTP
+- `/contracts` Solidity smart contracts
+- `/FlowDevFeedback` Flow's feedback
+AI and API scripts:
+-  `/pools`, `/gpt`, `/server` are the AI + API webscript
+
+Everything else is SWIFT for the mobile app frontend.
+
 ## Deployments
 
 #### Ethereum Sepolia
@@ -71,7 +83,6 @@ Adding Skale would permit to get access to the chain's rising DeFi ecosystem and
 ##### AirDAO
 Adding AirDAO layer1 would permit to get access to the chain's rising DeFi ecosystem and high rates for our users, notably as the DAO community is within our target audience. Should we implement in the future, we would track multiple staking opportunitie/ lending protocols across the chain. Multiple pools would be compared for finding the most effective yields.
 
-##### Alchemy
-
 
 ##### Privy
+We would like to implement Privy's account abstraction and social log-in.
