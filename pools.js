@@ -39,3 +39,10 @@ export async function getAllPoolsInterestRates() {
 
     return pool_interest_rates_map;
 }
+
+
+async function getPools() {
+    const response = await fetch('https://yields.llama.fi/pools');
+    return response.json();
+
+}
