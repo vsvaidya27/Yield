@@ -57,3 +57,21 @@ To make the UX as simple as it can get for users - aside Social login, we plan t
 #### Unlimit
 
 To convert fiat (USD) to USDC - that would subsequently go to other platforms as a way of generating yields (automatically in the background), Unlimit comes in handy in providing users the easiest approach to buy in on “Yield”. When users take profit, Unlimit comes in yet again and provides an easy way to off-ramp the USDC tokens to their bank account (all in an abstracted way)
+
+#### Next Partners' Tech to add, TBD (will be added in the future):
+#####NeomEVM
+Adding Neom would permit to get access to Solana's DeFi rates for our users. Should we implement in the future, we would track multiple staking opportunitie/ lending protocols across the chain. Multiple pools would be compared for finding the most effective yields.
+
+##### Dynamic
+We would like to replace web3auth with Dynamic for social login.
+
+##### Skale
+Adding Skale would permit to get access to the chain's rising DeFi ecosystem and high rates for our users. Should we implement in the future, we would track multiple staking opportunitie/ lending protocols across the chain. Multiple pools would be compared for finding the most effective yields.
+
+##### AirDAO
+Adding AirDAO layer1 would permit to get access to the chain's rising DeFi ecosystem and high rates for our users, notably as the DAO community is within our target audience. Should we implement in the future, we would track multiple staking opportunitie/ lending protocols across the chain. Multiple pools would be compared for finding the most effective yields.
+
+##### Alchemy
+
+
+##### Privy
