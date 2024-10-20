@@ -3,7 +3,7 @@ import { getBestPool } from "./gpt.js"
 
 const app = express();
 
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 const POOL_TO_ADDRESS_MAP = {
     "compound_base": "0xf25212e676d1f7f89cd72ffee66158f541246445",
@@ -29,6 +29,6 @@ app.get('/',( req, res) => {
 
 
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Server is running on port ${port}`);
 });
 
