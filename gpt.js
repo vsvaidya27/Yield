@@ -17,8 +17,5 @@ export async function getBestPool() {
       model: 'gpt-4o',
     })
   
-    console.log(completion.choices[0].message.content);
+    return completion.choices[0].message.content;
 }
-
-
-getBestPool();
