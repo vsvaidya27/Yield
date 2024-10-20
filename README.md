@@ -84,6 +84,9 @@ As a process of working on Flow, our developer feedback is attached here: ./Flow
 The project is based on the USDC token as a starting asset - given the mobile app targets users with NO experience, USDC offers a familiar and stable foundation for their exposure to crypto yields.
 Additionally, the fact that USDC is a multichain asset, and Cross Chain Transfer Protocol (CCTP) allows us to on-ramp users crypto to Ethereum and then subsequently teleport it to the necessary chains, which is more of the reason why we chose USDC as a foundational crypto representation of their assets.
 
+#### Coinbase developer platform
+The projects intends to use Coinbases On-ramp and wallet mechanisms for easy crypto access to users
+
 #### Polygon
 
 We track multiple staking opportunitie/ lending protocols across several chains. Multiple pools (Compound v3, Aave v3 etc) in Polygon PoS are tracked for finding the most effective yields.
