@@ -24,7 +24,7 @@ A Yield aggregator iOS platform friendly to non-crypto-native users
 
 ### Best Yield Finding AI Module:
 
-- Historical APRs from a set of public (lending and staking) protocols
+- Historical APRs from a set of public (lending and staking protocols)
 - OpenAI’s GPT models (to predict the most prospective investment option among the options considering past rates and future prospects.)
 - Flow , Polygon, Ethereum, Arbitrum, Skale and AirDAO (To find the most effective yields across multiple chains)
 
@@ -57,11 +57,11 @@ USDCFaucet: 0xf1c844d9499e19a3215160c92cdeb377bbc14097
 FlowConvertAndStake Testnet - 0x4E5B4B9ae8a4aF96E8eC7702d29efeABD98D89b0
 Flow-Staking (Derivative stake rewards) Testnet - 0x580798abCb1F13Cd06642185b2772a96f3173F20
 
-
 ## Figma UI
+
 ### This link gives you viewing access to the design:
 
-https://www.figma.com/design/qy7SUzy2URRL2J1jqhdvbC/YIELD-ETH-GLOBAL?node-id=0-1&t=oLZsxPOFiKG1DBSG-1
+[Figma User Interface](https://www.figma.com/design/qy7SUzy2URRL2J1jqhdvbC/YIELD-ETH-GLOBAL?node-id=0-1&t=oLZsxPOFiKG1DBSG-1)
 
 ## Projects Integrated
 
