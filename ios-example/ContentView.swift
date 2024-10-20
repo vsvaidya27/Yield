@@ -14,6 +14,7 @@ struct MainApp: App {
 
 struct ContentView: View {
     @StateObject var vm: ViewModel
+    @State private var showLoginView = false
 
     var body: some View {
         NavigationView {
@@ -40,7 +41,8 @@ struct ContentView: View {
                                     .tag(1)
                                     UserDetailView(
                                         web3RPC: web3rpc,
-                                        viewModel: vm
+                                        viewModel: vm,
+                                        showLoginView: $showLoginView
                                     )
                                     .tabItem {
                                         Label("User", systemImage: "person.crop.circle")
@@ -49,7 +51,11 @@ struct ContentView: View {
                                 }
                                 
                             } else {
-                                LoginView(vm: vm)
+                                if showLoginView {
+                                    LoginView(vm: vm)
+                                } else {
+                                    LandingView(showLoginView: $showLoginView)
+                                }
                             }
                         }
                     }

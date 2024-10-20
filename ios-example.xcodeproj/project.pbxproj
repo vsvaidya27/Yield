@@ -23,6 +23,7 @@
 		E16C8F362CC4E0BD00B435B1 /* PoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16C8F352CC4E0B800B435B1 /* PoolView.swift */; };
 		E16C8F382CC52AD800B435B1 /* BestViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16C8F372CC52AD500B435B1 /* BestViews.swift */; };
 		E16C8F3A2CC53D6B00B435B1 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16C8F392CC53D6700B435B1 /* ChartView.swift */; };
+		E16C8F3C2CC5487800B435B1 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16C8F3B2CC5486E00B435B1 /* LandingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		E16C8F352CC4E0B800B435B1 /* PoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolView.swift; sourceTree = "<group>"; };
 		E16C8F372CC52AD500B435B1 /* BestViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViews.swift; sourceTree = "<group>"; };
 		E16C8F392CC53D6700B435B1 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		E16C8F3B2CC5486E00B435B1 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -116,6 +118,7 @@
 		4D8FF82A294339F100AB4F51 /* ios-example */ = {
 			isa = PBXGroup;
 			children = (
+				E16C8F3B2CC5486E00B435B1 /* LandingView.swift */,
 				E16C8F392CC53D6700B435B1 /* ChartView.swift */,
 				E16C8F312CC4C5EB00B435B1 /* Models */,
 				E16C8F2F2CC4C5DC00B435B1 /* HomeView.swift */,
@@ -306,6 +309,7 @@
 				4D8FF85629433A6400AB4F51 /* ViewModel.swift in Sources */,
 				E16C8F382CC52AD800B435B1 /* BestViews.swift in Sources */,
 				E16C8F362CC4E0BD00B435B1 /* PoolView.swift in Sources */,
+				E16C8F3C2CC5487800B435B1 /* LandingView.swift in Sources */,
 				4D8FF85D29433ACB00AB4F51 /* LoginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
