@@ -31,6 +31,12 @@ USDCFaucet: 0xf1c844d9499e19a3215160c92cdeb377bbc14097
 FlowConvertAndStake Testnet - 0x4E5B4B9ae8a4aF96E8eC7702d29efeABD98D89b0
 Flow-Staking (Derivative stake rewards) Testnet - 0x580798abCb1F13Cd06642185b2772a96f3173F20
 
+
+## Figma UI
+### This link gives you viewing access to the design:
+
+https://www.figma.com/design/qy7SUzy2URRL2J1jqhdvbC/YIELD-ETH-GLOBAL?node-id=0-1&t=oLZsxPOFiKG1DBSG-1
+
 ## Projects Integrated
 
 #### Flow
