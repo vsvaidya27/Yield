@@ -1,6 +1,6 @@
 import express from 'express';
 import { getBestPool } from "./gpt.js"
-import { getPoolInterestRates, POOL_TO_ID_MAP } from "./pools.js"
+import { getAllPoolsInterestRates } from "./pools.js"
 
 const app = express();
 
@@ -14,21 +14,30 @@ const POOL_TO_ADDRESS_MAP = {
     "aave-arbitrum": "0x794a61358d6845594f94dc1db02a252b5b4814ad"
 }
 
-
-app.get('/',( req, res) => {
+app.get('/', (req, res) => {
     getBestPool().then(pool => {
 
         async function getMostRecentYieldOfBestPool() {
-            let yields_of_best_pool = await getPoolInterestRates(POOL_TO_ID_MAP[pool]);
+            let pools_interest_rates = await getAllPoolsInterestRates();
+            let yields_of_best_pool = pools_interest_rates[pool];
             let most_recent_yield_of_best_pool = yields_of_best_pool[yields_of_best_pool.length - 1];
-            return most_recent_yield_of_best_pool;
+            return { pools_interest_rates, most_recent_yield_of_best_pool }; 
         }
 
         let pool_address = POOL_TO_ADDRESS_MAP[pool];
         let response_obj = {};
 
-        getMostRecentYieldOfBestPool().then(most_recent_yield_of_best_pool => {
-            response_obj[pool] = [most_recent_yield_of_best_pool, pool_address];
+        getMostRecentYieldOfBestPool().then(({ pools_interest_rates, most_recent_yield_of_best_pool }) => { 
+
+            let other_pools = {};
+            for (let pool_name in pools_interest_rates) {  
+                if (pool_name !== pool) {
+                    other_pools[pool_name] = pools_interest_rates[pool_name][pools_interest_rates[pool_name].length - 1];
+                }
+            }
+
+            response_obj["best_pool"] = { [pool]: [most_recent_yield_of_best_pool, pool_address] };
+            response_obj["other_pools"] = other_pools;
             res.send(response_obj);
         }).catch(error => {
             console.log("error: ", error);
@@ -38,11 +47,6 @@ app.get('/',( req, res) => {
     })
 });
 
-
-  
-
-
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
-
